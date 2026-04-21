@@ -27,4 +27,5 @@ jobs:
       with:
         context: .
         push: true
+        no-cache: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/beermapping:latest
