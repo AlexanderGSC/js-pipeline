@@ -2,10 +2,14 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send('<h1>Hello World!</h1>')
-  res.send('<h2>Commits Log</h2>')
-  res.send('<p>[1]: Added a <b>CI/CD</b> pipeline:<br />Now every chage is actually commited to DockerHub and locally managed by Watchtower</p>')
-})
+  const html = `
+    <h1>Hello World!</h1>
+    <h2>Commits Log</h2>
+    <p>[1]: Added a <b>CI/CD</b> pipeline:<br />
+    Now every change is actually committed to DockerHub and locally managed by Watchtower</p>
+    <p>[2]: Fixed small bugs<p>
+  `;
+  res.send(html)
 
 const PORT = 8080
 
