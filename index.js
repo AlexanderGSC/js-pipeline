@@ -9,7 +9,8 @@ app.get('/', (req, res) => {
     Now every change is actually committed to DockerHub and locally managed by Watchtower</p>
     <p>[2]: Fixed small bugs<p>
   `;
-  res.send(html)
+  res.send(html);
+});
 
 const PORT = 8080
 
